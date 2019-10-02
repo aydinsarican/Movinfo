@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>57994804650-b4a57k124kpar61q102d0v2lug5ntkj3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.57994804650-b4a57k124kpar61q102d0v2lug5ntkj3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDjOz3D__Ii8TGXDdixpK7KbP66E439Wys</string>
+	<key>GCM_SENDER_ID</key>
+	<string>57994804650</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aydinsarican.Movinfo</string>
+	<key>PROJECT_ID</key>
+	<string>movinfo-78d69</string>
+	<key>STORAGE_BUCKET</key>
+	<string>movinfo-78d69.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:57994804650:ios:feb15b82cc6865c9b87fd3</string>
+	<key>DATABASE_URL</key>
+	<string>https://movinfo-78d69.firebaseio.com</string>
+</dict>
+</plist>
