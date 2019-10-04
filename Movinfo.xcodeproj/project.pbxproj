@@ -34,6 +34,7 @@
 		183E602123468BAC00E0B2C6 /* MovieDetailHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183E601F23468BAC00E0B2C6 /* MovieDetailHeaderTableViewCell.xib */; };
 		183E602523468CD200E0B2C6 /* MovieDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E602423468CD200E0B2C6 /* MovieDetailTableViewController.swift */; };
 		1892AE5D2343C84A009E4765 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1892AE5C2343C84A009E4765 /* GoogleService-Info.plist */; };
+		1898EFE12347E0B50028086A /* 1961-movie-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 1898EFE02347E0B50028086A /* 1961-movie-loading.json */; };
 		18C9A7EB2343BD6B008765EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9A7EA2343BD6B008765EB /* AppDelegate.swift */; };
 		18C9A7ED2343BD6B008765EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9A7EC2343BD6B008765EB /* SceneDelegate.swift */; };
 		18C9A7EF2343BD6B008765EB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C9A7EE2343BD6B008765EB /* SplashViewController.swift */; };
@@ -48,10 +49,7 @@
 		18CF53AA2346531C0075EF56 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF53A92346531C0075EF56 /* MainTableViewController.swift */; };
 		18CF53AD234655E40075EF56 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF53AB234655E40075EF56 /* MoviesTableViewCell.swift */; };
 		18CF53AE234655E40075EF56 /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CF53AC234655E40075EF56 /* MoviesTableViewCell.xib */; };
-		18F9331F2347BAAD00C5308E /* 1961-movie-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 18F9331E2347BAAD00C5308E /* 1961-movie-loading.json */; };
 		18F933212347BB6900C5308E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F933202347BB6900C5308E /* UIViewExtension.swift */; };
-		18F933232347BEE400C5308E /* movieLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 18F933222347BEE300C5308E /* movieLoading.json */; };
-		18F933272347C65B00C5308E /* video-cam.json in Resources */ = {isa = PBXBuildFile; fileRef = 18F933262347C65B00C5308E /* video-cam.json */; };
 		9E9C425E1D0B3025398761CD /* Pods_Movinfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03D2B7B617F94B0F39A1352 /* Pods_Movinfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +81,7 @@
 		183E601F23468BAC00E0B2C6 /* MovieDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		183E602423468CD200E0B2C6 /* MovieDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewController.swift; sourceTree = "<group>"; };
 		1892AE5C2343C84A009E4765 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1898EFE02347E0B50028086A /* 1961-movie-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1961-movie-loading.json"; sourceTree = "<group>"; };
 		18C9A7E72343BD6B008765EB /* Movinfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movinfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C9A7EA2343BD6B008765EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C9A7EC2343BD6B008765EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,10 +98,7 @@
 		18CF53A92346531C0075EF56 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		18CF53AB234655E40075EF56 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
 		18CF53AC234655E40075EF56 /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
-		18F9331E2347BAAD00C5308E /* 1961-movie-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1961-movie-loading.json"; sourceTree = "<group>"; };
 		18F933202347BB6900C5308E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		18F933222347BEE300C5308E /* movieLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movieLoading.json; sourceTree = "<group>"; };
-		18F933262347C65B00C5308E /* video-cam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "video-cam.json"; sourceTree = "<group>"; };
 		5FBF83756D613B9786A8AE8D /* Pods-Movinfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movinfo.debug.xcconfig"; path = "Target Support Files/Pods-Movinfo/Pods-Movinfo.debug.xcconfig"; sourceTree = "<group>"; };
 		E03D2B7B617F94B0F39A1352 /* Pods_Movinfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movinfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A80D8CCDC3B0AC5C42A69B /* Pods-Movinfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movinfo.release.xcconfig"; path = "Target Support Files/Pods-Movinfo/Pods-Movinfo.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +163,6 @@
 		18C9A7E92343BD6B008765EB /* Movinfo */ = {
 			isa = PBXGroup;
 			children = (
-				18F933222347BEE300C5308E /* movieLoading.json */,
 				18C9A7FE2343C0BF008765EB /* Model */,
 				18C9A8002343C0D8008765EB /* View */,
 				18C9A7FF2343C0CF008765EB /* Controller */,
@@ -178,6 +173,7 @@
 				18C9A8022343C0EB008765EB /* SupportingFiles */,
 				1892AE5C2343C84A009E4765 /* GoogleService-Info.plist */,
 				18C9A7F82343BD6D008765EB /* Info.plist */,
+				1898EFE02347E0B50028086A /* 1961-movie-loading.json */,
 			);
 			path = Movinfo;
 			sourceTree = "<group>";
@@ -239,8 +235,6 @@
 		18C9A8032343C0F8008765EB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				18F9331E2347BAAD00C5308E /* 1961-movie-loading.json */,
-				18F933262347C65B00C5308E /* video-cam.json */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -344,7 +338,6 @@
 				183934112347226D0054E7F9 /* Montserrat-Regular.ttf in Resources */,
 				183934052347226D0054E7F9 /* Montserrat-Light.ttf in Resources */,
 				18C9A7F72343BD6D008765EB /* LaunchScreen.storyboard in Resources */,
-				18F9331F2347BAAD00C5308E /* 1961-movie-loading.json in Resources */,
 				1892AE5D2343C84A009E4765 /* GoogleService-Info.plist in Resources */,
 				183934072347226D0054E7F9 /* Montserrat-ExtraLight.ttf in Resources */,
 				183E602123468BAC00E0B2C6 /* MovieDetailHeaderTableViewCell.xib in Resources */,
@@ -354,18 +347,17 @@
 				183E601D23468B8900E0B2C6 /* MovieDetailTableViewCell.xib in Resources */,
 				1839340B2347226D0054E7F9 /* Montserrat-BlackItalic.ttf in Resources */,
 				183934102347226D0054E7F9 /* Montserrat-Black.ttf in Resources */,
+				1898EFE12347E0B50028086A /* 1961-movie-loading.json in Resources */,
 				1839340C2347226D0054E7F9 /* Montserrat-SemiBold.ttf in Resources */,
 				1839340A2347226D0054E7F9 /* Montserrat-MediumItalic.ttf in Resources */,
 				1839340F2347226D0054E7F9 /* OFL.txt in Resources */,
 				183934122347226D0054E7F9 /* Montserrat-Italic.ttf in Resources */,
 				183934032347226D0054E7F9 /* Montserrat-Medium.ttf in Resources */,
-				18F933232347BEE400C5308E /* movieLoading.json in Resources */,
 				183934082347226D0054E7F9 /* Montserrat-Thin.ttf in Resources */,
 				18CF53AE234655E40075EF56 /* MoviesTableViewCell.xib in Resources */,
 				183934092347226D0054E7F9 /* Montserrat-Bold.ttf in Resources */,
 				183934062347226D0054E7F9 /* Montserrat-ThinItalic.ttf in Resources */,
 				1839340D2347226D0054E7F9 /* Montserrat-ExtraLightItalic.ttf in Resources */,
-				18F933272347C65B00C5308E /* video-cam.json in Resources */,
 				18C9A7F22343BD6B008765EB /* Main.storyboard in Resources */,
 				1839340E2347226D0054E7F9 /* Montserrat-ExtraBold.ttf in Resources */,
 				183934022347226D0054E7F9 /* Montserrat-LightItalic.ttf in Resources */,

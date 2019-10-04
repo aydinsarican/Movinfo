@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 class MovieDetailTableViewController: UITableViewController {
     
@@ -20,31 +21,52 @@ class MovieDetailTableViewController: UITableViewController {
         
         setupUI()
         
-        self.navigationItem.title = movieName
-        self.navigationItem.backBarButtonItem?.title = ""
+        getSelectedMovieDetail()
+    }
+    
+    func setupUI()
+    {
+        tableView.register(UINib(nibName: "MovieDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "detailCell")
+        tableView.register(UINib(nibName: "MovieDetailHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerCell")
+        tableView.tableFooterView = UIView()
         
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationItem.title = movieName
+        navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationItem.backBarButtonItem?.title = "Back"
+    }
+    override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    func getSelectedMovieDetail()
+    {
         MovieService.getMovieDetailBy(movieId: movieId) { (response) in
             switch response {
             case .success(let movieDetailModel):
                 self.movieDetail = movieDetailModel
                 
                 let mirrorObj = Mirror(reflecting: movieDetailModel)
+                var movieDetailLogDict: [String : String] = [:]
                 for (_, attr) in mirrorObj.children.enumerated()
                 {
                     if let pName = attr.label
                     {
-                        print("\(pName): \(attr.value)")
+                        let name = pName.capitalizingFirstLetter()
                         if "\(attr.value)" == "N/A"
                         {
-                            self.pNames.append("\(pName): -")
+                            self.pNames.append("\(name):\t -")
                         }
                         else
                         {
-                            self.pNames.append("\(pName): \(attr.value)")
+                            self.pNames.append("\(name):\t \(attr.value)")
                         }
+                        
+                        //The maximum supported length is 100
+                        let trimmedString = "\(attr.value)".prefix(99)
+                        movieDetailLogDict[name] = String(trimmedString)
                     }
                 }
-                
+                self.logMovieDetails(movieLogDict: movieDetailLogDict)
                 self.tableView.reloadData()
             case .failure(let err):
                 print(err.localizedDescription)
@@ -52,19 +74,7 @@ class MovieDetailTableViewController: UITableViewController {
         }
     }
     
-    func setupUI(){
-        tableView.register(UINib(nibName: "MovieDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "detailCell")
-        tableView.register(UINib(nibName: "MovieDetailHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "headerCell")
-        tableView.tableFooterView = UIView()
-        self.navigationController?.navigationBar.prefersLargeTitles = false
-        self.navigationItem.title = ""
-        
-        navigationItem.hidesSearchBarWhenScrolling = false
-        definesPresentationContext = true
-    }
-    
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -83,7 +93,7 @@ class MovieDetailTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 // headerView
         {
-            return 450
+            return 530
         }
         else
         {
@@ -103,12 +113,16 @@ class MovieDetailTableViewController: UITableViewController {
         {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath) as? MovieDetailTableViewCell {
                 
-                //cell.detailTextLabel?.text = self.movieDetail?.actors
                 cell.textLabel?.text = pNames[indexPath.row]
                 
                 return cell
             }
         }
         return UITableViewCell()
+    }
+    
+    func logMovieDetails(movieLogDict: [String : String]) {
+        print(movieLogDict)
+        Analytics.logEvent("selectedMovieDetail", parameters: movieLogDict)
     }
 }

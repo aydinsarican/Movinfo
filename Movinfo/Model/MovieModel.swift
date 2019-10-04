@@ -6,8 +6,6 @@
 //  Copyright © 2019 aydinsarican. All rights reserved.
 //
 
-//   let movieModel = try? newJSONDecoder().decode(MovieModel.self, from: jsonData)
-
 import Foundation
 
 // MARK: - MovieModel

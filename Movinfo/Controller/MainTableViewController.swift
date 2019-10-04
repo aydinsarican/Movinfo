@@ -12,22 +12,20 @@ import Lottie
 class MainTableViewController: UITableViewController, UISearchBarDelegate {
     
     private var movies = [Movie]()
+    
     private let searchController = UISearchController(searchResultsController: nil)
-    private var loadMoreIsCalled = false
-    fileprivate var isLoading = false
+    
     fileprivate var searchText: String = ""
     fileprivate var selectedMovieId: String = ""
     fileprivate var selectedMovieName: String = ""
-    let loadingView = AnimationView()
     
+    let loadingView = AnimationView()
     var infoLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        
-        self.clearsSelectionOnViewWillAppear = true
     }
     
     func setupUI()
@@ -35,6 +33,7 @@ class MainTableViewController: UITableViewController, UISearchBarDelegate {
         tableView.register(UINib(nibName: "MoviesTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
+        clearsSelectionOnViewWillAppear = true
         
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationItem.title = "Movinfo"
@@ -89,12 +88,11 @@ class MainTableViewController: UITableViewController, UISearchBarDelegate {
         let encodedString = searchText.replacingOccurrences(of: " ", with: "+")
         
         MovieService.getMoviesBy(searchKey: encodedString) { (response) in
-            print(response)
             self.loader(show: false)
             self.movies.removeAll()
+            
             switch response {
             case .success(let movieModel):
-                print(movieModel)
                 self.movies.append(contentsOf: movieModel.movies ?? [Movie]())
                 if self.movies.count == 0
                 {
@@ -105,23 +103,15 @@ class MainTableViewController: UITableViewController, UISearchBarDelegate {
                     self.infoLabel.text = ""
                 }
                 self.tableView.reloadData()
+            
             case .failure(let error):
-                //self.showAlert(title: "Warning", message: "Error - \(error)")
                 self.infoLabel.text = "Something went wrong"
                 print(error.localizedDescription)
             }
         }
     }
     
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let searchText = searchBar.text, searchText.count != 0 {
-            searchMovies(searchText: searchText)
-        }
-    }
-    
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

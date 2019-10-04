@@ -8,5 +8,6 @@ target 'Movinfo' do
   pod 'Alamofire', '5.0.0-beta.6'
   pod 'lottie-ios'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Firebase/Analytics'
 
 end

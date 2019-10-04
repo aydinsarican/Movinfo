@@ -17,8 +17,14 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.loodosTextLabel.text = ""
         
+        checkInternetConn()
+    }
+    
+    private func checkInternetConn()
+    {
         let monitor = NWPathMonitor()
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
@@ -38,7 +44,6 @@ class SplashViewController: UIViewController {
                     }
                 }
             }
-
             print(path.isExpensive)
         }
         
@@ -46,8 +51,8 @@ class SplashViewController: UIViewController {
         monitor.start(queue: queue)
     }
     
-    private func fetchRemoteConfig(){
-        
+    private func fetchRemoteConfig()
+    {
         RemoteConfig.remoteConfig().fetch(withExpirationDuration: 0) { (status, err) in
             guard err == nil else{ return }
             
@@ -60,11 +65,6 @@ class SplashViewController: UIViewController {
                 UIView.transition(with: self.loodosTextLabel, duration: 3, options: .transitionCrossDissolve, animations: animation, completion: { _ in
                     self.performSegue(withIdentifier: "showMainPageSegue", sender: nil)
                 })
-                    
-                
-//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
-//                    self.performSegue(withIdentifier: "showMainPageSegue", sender: nil)
-//                })
             }
         }
     }
