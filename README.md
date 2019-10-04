@@ -1,4 +1,4 @@
 # Moovinfo
 
 Xcode 11
-Swift 5.2
+Swift 5
