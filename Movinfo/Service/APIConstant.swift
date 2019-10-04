@@ -11,7 +11,7 @@ import Foundation
 struct APIConstant {
     
     //http://www.omdbapi.com/?i=tt3896198&apikey=fd7c14c2
-    static let apiKey = "&apikey=fd7c14c2"
+    static let apiKey = "fd7c14c2"
     static let baseURL = "http://www.omdbapi.com/"
 }
 

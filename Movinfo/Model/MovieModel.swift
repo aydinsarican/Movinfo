@@ -12,11 +12,11 @@ import Foundation
 
 // MARK: - MovieModel
 struct MovieModel: Codable {
-    let movies: [Movie]
-    let totalResults, response: String
+    let movies: [Movie]?
+    let totalResults, response: String?
 
     enum CodingKeys: String, CodingKey {
-        case movies = "Movies"
+        case movies = "Search"
         case totalResults
         case response = "Response"
     }
@@ -24,8 +24,8 @@ struct MovieModel: Codable {
 
 // MARK: - Movie
 struct Movie: Codable {
-    let title, year, imdbID, type: String
-    let poster: String
+    let title, year, imdbID, type: String?
+    let poster: String?
 
     enum CodingKeys: String, CodingKey {
         case title = "Title"
@@ -35,3 +35,5 @@ struct Movie: Codable {
         case poster = "Poster"
     }
 }
+
+

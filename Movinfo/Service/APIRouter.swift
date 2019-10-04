@@ -39,10 +39,10 @@ enum APIRouter: URLRequestConvertible {
         switch self
         {
         case .searchMovies(let searchKey):
-            return ["?s=": searchKey, "&apikey=": APIConstant.apiKey]
+            return ["s": searchKey, "apikey": APIConstant.apiKey]
             
         case .getMovie(let movieId):
-            return ["?i=": movieId, "&apikey=": APIConstant.apiKey]
+            return ["i": movieId, "apikey": APIConstant.apiKey]
         }
     }
     

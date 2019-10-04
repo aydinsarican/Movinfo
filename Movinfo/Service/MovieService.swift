@@ -10,10 +10,15 @@ import Foundation
 import Alamofire
 
 struct MovieService {
-    static func getMoviesBy(searchKey: String, completion: @escaping (AFResult<[MovieModel]>) -> Void)
+    static func getMoviesBy(searchKey: String, completion: @escaping (AFResult<MovieModel>) -> Void)
     {
         APIClient.decodableRequest(route: APIRouter.searchMovies(searchKey: searchKey), completion: completion)
     }
+    
+//    static func getMoviesBy(searchKey: String, completion: @escaping (DataResponse<Any>) -> Void)
+//    {
+//        APIClient.jsonRequest(route: APIRouter.searchMovies(searchKey: searchKey), completion: completion)
+//    }
     
     static func getMovieDetailBy(movieId: String, completion: @escaping (AFResult<MovieDetailModel>) -> Void)
     {

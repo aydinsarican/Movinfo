@@ -10,8 +10,19 @@
 
 import Foundation
 
+protocol PropertyNames {
+    func propertyNames() -> [String]
+}
+
+extension PropertyNames
+{
+    func propertyNames() -> [String] {
+        return Mirror(reflecting: self).children.compactMap { $0.label }
+    }
+}
+
 // MARK: - MovieDetailModel
-struct MovieDetailModel: Codable {
+struct MovieDetailModel: Codable, PropertyNames {
     let title, year, rated, released: String
     let runtime, genre, director, writer: String
     let actors, plot, language, country: String
